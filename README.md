@@ -4,7 +4,8 @@ This project is a simple activity that allows the user to manage an animal zoo, 
 
 # What Techniques Were Incorporated
 
-This program used dynamic memory management and allocation, through the usage of nodes and pointers. Fundamental programming terminology like "new", the dereferencing operator ("*"), and "delete[]" were considered in the production of this program.  
+This program used dynamic memory management and allocation through the usage of nodes and pointers. Fundamental programming terminology like "new", the dereferencing operator ("*"), and "delete[]" were considered in the production of this program. Pointer variables, pointer functions, dynamic memory management, linked lists, conditionals, and handling user input and output were also considered. 
+
 
 # How It Works
 
@@ -16,4 +17,4 @@ To run the following program, clone the repository to your computer, and then si
 
 # Purpose
 
-This project was intended to practice some more advanced material in the first semester computer programming concepts, such as pointer variables, pointer functions, dynamic memory management, linked lists, conditionals, and handling user input and output. 
+This project was intended to practice some more advanced material in first semester computer programming concepts, and to practice the use of linked lists in a semi-engaging program.
