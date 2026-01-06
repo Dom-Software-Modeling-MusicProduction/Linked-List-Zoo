@@ -2,9 +2,9 @@
 
 This project is a simple activity that allows the user to manage an animal zoo, which is essentially a list of animals that can be dynamically updated based on the selected option. The result is a basic simulation where you effectively get to manage your own personal zoo. 
 
-# Goal
+# What Techniques Were Incorporated
 
-The goal of this program was to practice dynamic memory management and allocation, through the usage of nodes and pointers. Fundamental programming terminology like "new", the dereferencing operator ("*"), and "delete[]" were considered in the production of this program.  
+This program used dynamic memory management and allocation, through the usage of nodes and pointers. Fundamental programming terminology like "new", the dereferencing operator ("*"), and "delete[]" were considered in the production of this program.  
 
 # How It Works
 
