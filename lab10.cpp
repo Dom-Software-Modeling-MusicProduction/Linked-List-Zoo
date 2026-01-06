@@ -4,7 +4,7 @@
 using namespace std;
 
 /**
- * TODO: Create the Animal structure
+
  * It represents an animal with its name, age, species, and a pointer to the next animal in a linked list.
  */
 struct Animal {
@@ -14,13 +14,10 @@ struct Animal {
     Animal* next;
 };
 
-//TODO: Create an animal pointer called head and initialize it to nullptr
+//Create an animal pointer called head and initialize it to nullptr
 Animal* head = nullptr; //pointer to first element in list; if the first element is none, the list is empty
 
-/*
-//TODO: Uncomment the function declarations below as you complete them
-in order from top to bottom
-*/
+
 void addAnimal();
 void displayList();
 void findOldestAnimal();
@@ -52,15 +49,15 @@ void addAnimal() { //asks the user for the name, the age, and species of the ani
     cout << "Enter the species of the animal: ";
     cin >> species;
 
-    //TODO: Create a new animal with the collected details
+    //Create a new animal with the collected details
     Animal* newAnimal = new Animal{name, age, species, nullptr}; //create a new node dynamically
-    //TODO: Set the new animal's next pointer to be a null pointer
+    //Set the new animal's next pointer to be a null pointer
     newAnimal->next = nullptr;
-    //TODO: if the list is empty, make this the head
+    //if the list is empty, make this the head
     if (head == nullptr) {
         head = newAnimal; //if the list is empty, make the head = newAnimal
     } else {
-        /*TODO: if the list isn't empty, iterate through the list until 
+        /*if the list isn't empty, iterate through the list until 
         you reach the last node, then add the new node to the end*/
         Animal* current = head;
         while (current->next != nullptr)
@@ -77,7 +74,7 @@ If the list is empty, it prints out an error message,
 otherwise it prints out each node's information.
 */
 void displayList() {
-    //TODO: Complete this function!
+    
     if (head == nullptr) { //if the list is empy
         cout << "List empty." << endl;
         return;
@@ -102,7 +99,7 @@ need to move the Ali node's next attribute so it points to Chan (Ali -> Chan).
 3) Delete the temporary pointer and report a successful delete
 */
 void deleteAnimal() { //deletes one animal by name
-    //TODO: Handle the empty list
+    //Handle the empty list
     if (head == nullptr) {
         cout << "List empty. No animal to delete." << endl;
         return;
@@ -112,7 +109,7 @@ void deleteAnimal() { //deletes one animal by name
     cout << "Enter the name of the animal to delete: ";
     cin >> name;
 
-    //TODO: If the head node is the one to be deleted,
+    //If the head node is the one to be deleted,
     //delete it using the steps listed above and return
     if (head->name == name) {
         Animal* temp = head; //save temporary pointer
@@ -122,7 +119,7 @@ void deleteAnimal() { //deletes one animal by name
         return;
     }
 
-    //TODO: Call deleteAnimalRecursive
+    //Call deleteAnimalRecursive
     deleteAnimalRecursive(nullptr, head, name);
 }
 
@@ -138,7 +135,7 @@ and report that the animal was deleted successfully.
 */
 //void deleteAnimalRecursive(Animal* previous, Animal* current, const string& name) {
 void deleteAnimalRecursive(Animal* previous, Animal* current, const string& name) { //recursively finds the animal to delete and deletes it
-    //TODO: Complete this function!
+    
     if (current == nullptr) { //if the animal is not found
         cout << "Animal not found." << endl;
         return;
@@ -162,7 +159,7 @@ Otherwise, it calls deleteListRecursive starting with the head node, then assign
 */
 
 void deleteList() { //deletes the entire linked list
-    //TODO: Complete this function!
+   
     if (head == nullptr) { //if the list is empty, throw an error
         cout << "List already empty." << endl;
         return;
@@ -178,9 +175,9 @@ This recursive function first checks to see if the current node exists
 If it does, it makes a recursive call to itself using the next node, 
 then deletes the current one.
 */
-//void deleteListRecursive(Animal* current) {
-void deleteListRecursive(Animal* current) { //delets animals from start to end using recursion
-    //TODO: Complete this function!
+
+void deleteListRecursive(Animal* current) { //deletes animals from start to end using recursion
+    
     if (current == nullptr){ //if the current element is nullptr, then stop
         return;
     }
@@ -198,7 +195,7 @@ the animal wasn't found. Otherwise, it uses the result of
 searchAnimalRecursive to print out the details.
 */
 void searchAnimal() { 
-    //TODO: Handle the empty list
+    //Handle the empty list
     if (head == nullptr) {
         cout << "List empty." << endl;
         return;
@@ -208,10 +205,10 @@ void searchAnimal() {
     cout << "Enter the name of the animal to search for: ";
     cin >> name;
 
-    //TODO: Call searchAnimalRecursive and assign it to a pointer
+    //Call searchAnimalRecursive and assign it to a pointer
     Animal* result = searchAnimalRecursive(head, name); 
     
-    //TODO: If the animal was found, print its details, otherwise
+    //If the animal was found, print its details, otherwise
     //print an error
     if (result != nullptr) {
         cout << "Name: " << result->name << ", Age: " << result->age << ", Species: " << result->species << endl;
@@ -227,9 +224,9 @@ If the current node doesn't exist, it returns a null pointer.
 Otherwise if the name matches, it returns the current node.
 Otherwise it makes a recursive call to itself using the next node.
 */
-//Animal* searchAnimalRecursive(Animal* current, const string& name) {
+
 Animal* searchAnimalRecursive(Animal* current, const string& name) { //recursively search list
-    //TODO: Complete this function!
+    
     if (current == nullptr){ 
         return nullptr;
     }
@@ -248,7 +245,7 @@ It uses these numbers to output the total number of animals and their average
 age.
 */
 void processAnimalData() { 
-    //TODO: Handle the empty list
+    //Handle the empty list
     if (head == nullptr) {
         cout << "The list is empty." << endl;
         return;
@@ -257,7 +254,7 @@ void processAnimalData() {
     int totalAge = 0;
     int animalCount = 0;
 
-    //TODO: Iterate through the list and add to the totalAge and
+    //Iterate through the list and add to the totalAge and
     //animalCount
     Animal* current = head; //set the current animal as a pointer to the head of the list
     while (current != nullptr) { //while current animal is not the end
@@ -281,16 +278,16 @@ using a loop.
 Once it has been through the entire list, it reports the oldest animal.
 */
 void findOldestAnimal() { 
-    //TODO: Handle the empty list
+    
     if (head == nullptr) {
         cout << "The list is empty." << endl;
         return;
     }
 
-    //TODO: Assume the initial oldest animal is the head node
+    //Assume the initial oldest animal is the head node
     Animal* oldest = head; //oldest is a pointer to the current oldest animal
 
-    //TODO: Iterate through the other nodes, and update 
+    //Iterate through the other nodes, and update 
     //your variable[s] if you find an older animal
     Animal* current = head->next; //set the animal pointer to the next element in the list
     while (current != nullptr) { //while the pointer is not null (current is a pointer that moves through the list an element at a time)
@@ -300,7 +297,7 @@ void findOldestAnimal() {
         current = current->next; //process next element
     }
 
-    //TODO: Print out the oldest animal
+    //Print out the oldest animal
     cout << "Name: " << oldest->name << ", Age: " << oldest->age << ", Species: " << oldest->species << endl;
 }
 
